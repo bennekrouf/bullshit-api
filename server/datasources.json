@@ -1,4 +1,16 @@
 {
+  "mongo-ovh": {
+    "host": "vps162465.ovh.net",
+    "port": 27017,
+    "database": "bullshit",
+    "name": "mongo-ovh",
+    "server": {
+      "auto_reconnect": true,
+      "reconnectTries": 100,
+      "reconnectInterval": 1000
+    },
+    "connector": "mongodb"
+  },
   "db": {
     "name": "db",
     "connector": "memory"

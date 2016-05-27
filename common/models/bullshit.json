@@ -9,7 +9,9 @@
   "properties": {
     "word": {
       "type": "string",
-      "required": true
+      "id": true,
+      "required": true,
+      "index": true
     }
   },
   "validations": [],
