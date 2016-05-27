@@ -23,5 +23,24 @@ boot(app, __dirname, function(err) {
 
   // start the server if `$ node server.js`
   if (require.main === module)
-    app.start();
+
+    app.io = require('socket.io')(app.start());
+
+    app.io.on('join', function(nick){
+      console.log('player joined : ', nick);
+      app.io.emit('message', nick+ ' has joined');
+
+      socket.on('bullshit', function(msg){
+          console.log(nick, ' is the winner');
+          app.io.emit('message', nick+ ' is the winner');
+      });
+
+      socket.on('disconnect', function(){
+          console.log('user disconnected');
+      });
+
+  });
+
+
+  //  app.start();
 });
