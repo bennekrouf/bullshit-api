@@ -37,5 +37,9 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "room": {
+    "dataSource": "mongo-ovh",
+    "public": true
   }
 }
